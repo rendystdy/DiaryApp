@@ -17,7 +17,7 @@ export default {
     await dispatch(FetchOne.action(1))
     await dispatch(DefaultTheme.action({ theme: 'default', darkMode: null }))
     // Navigate and reset to the main navigator
-    navigateAndSimpleReset('Main')
+    // navigateAndSimpleReset('Main')
   }),
   reducers: buildAsyncReducers({ itemKey: null }), // We do not want to modify some item by default
 }
