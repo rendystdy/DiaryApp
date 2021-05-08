@@ -1,1 +1,8 @@
 export { default as Brand } from './Brand'
+export { default as Button } from './Button'
+export { default as InputText } from './InputText'
+export { default as Gap } from './Gap'
+export { default as SignUp } from './SignUp'
+export { default as HeaderProfile } from './HeaderProfile'
+export { default as HeaderWithIcon } from './HeaderWithIcon'
+export { default as Note } from './Note'
