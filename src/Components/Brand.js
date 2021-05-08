@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { View, Image } from 'react-native'
-import { useTheme } from '@/Theme'
+import { useTheme } from '../Theme'
 
 const Brand = ({ height, width, mode }) => {
   const { Layout, Images } = useTheme()
@@ -20,9 +20,9 @@ Brand.propTypes = {
 }
 
 Brand.defaultProps = {
-  height: 200,
-  mode: 'contain',
-  width: 200,
+  height: 225,
+  mode: 'cover',
+  width: 225,
 }
 
 export default Brand
