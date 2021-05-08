@@ -2,6 +2,8 @@ import React from 'react'
 import { StyleSheet, Text, View, Dimensions } from 'react-native'
 import moment from 'moment'
 
+const { width } = Dimensions.get('screen')
+
 const Note = ({ data }) => {
   return (
     <View style={styles.container}>

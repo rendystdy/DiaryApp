@@ -14,7 +14,9 @@ const SignUp = ({ onPress }) => {
       </Text>
       <Gap height={5} />
       <TouchableWithoutFeedback onPress={onPress}>
-        <Text style={styles.textSignUp}>Sign Up</Text>
+        <Text style={[styles.textSignUp, { color: Colors.darkModerateBlue }]}>
+          Sign Up
+        </Text>
       </TouchableWithoutFeedback>
     </View>
   )
@@ -24,7 +26,6 @@ export default SignUp
 
 const styles = StyleSheet.create({
   textSignUp: {
-    color: Colors.darkModerateBlue,
     fontSize: 12,
     fontWeight: 'bold',
     letterSpacing: 1,

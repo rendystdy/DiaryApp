@@ -7,7 +7,13 @@ import { navigateAndSimpleReset } from '../../Navigators/Root'
 const LoginPage = () => {
   const { Layout, Images, Fonts, Colors } = useTheme()
   return (
-    <View style={[Layout.fill, styles.container]}>
+    <View
+      style={[
+        Layout.fill,
+        styles.container,
+        { backgroundColor: Colors.pageBackground },
+      ]}
+    >
       <ScrollView style={Layout.fill} showsVerticalScrollIndicator={false}>
         <View style={Layout.alignItemsCenter}>
           <Image
@@ -50,5 +56,5 @@ const LoginPage = () => {
 export default LoginPage
 
 const styles = StyleSheet.create({
-  container: { backgroundColor: Colors.pageBackground, paddingHorizontal: 20 },
+  container: { paddingHorizontal: 20 },
 })

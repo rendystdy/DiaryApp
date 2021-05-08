@@ -2,7 +2,6 @@ import React from 'react'
 import { StyleSheet, Text, View, Image } from 'react-native'
 import { useTheme } from '../Theme/'
 import { SvgXml } from 'react-native-svg'
-import iconSearch from '../Assets/Images/loupe.png'
 
 const HeaderWithIcon = () => {
   const { Images, Colors } = useTheme()
@@ -12,7 +11,7 @@ const HeaderWithIcon = () => {
       <Text style={styles.title}>Notes</Text>
       <View style={styles.wrapperIconSearch}>
         <Image
-          source={iconSearch}
+          source={Images.iconSearch}
           style={styles.iconSearchStyle}
           resizeMode="cover"
         />
