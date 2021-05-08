@@ -12,11 +12,17 @@ export const Colors = {
   // Example colors:
   transparent: 'rgba(0,0,0,0)',
   inputBackground: '#FFFFFF',
+  pageBackground: '#fafafa',
   white: '#ffffff',
   text: '#212529',
-  primary: '#E14032',
+  primary: '#FFC300',
   success: '#28a745',
   error: '#dc3545',
+  title: '#6D8AAC',
+  lightBlue: '#4499ff',
+  grayishBlue: '#a1afc1',
+  darkModerateBlue: '#466992',
+  gray: '#bdbdbd',
 }
 
 export const NavigationColors = {

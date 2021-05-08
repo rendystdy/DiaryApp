@@ -1,5 +1,6 @@
 export default {
-  welcome: 'Welcome to React Native DiaryApp by TheCodingMachine',
+  welcome: 'Lorem ipsum dolor sit amet',
+  description: 'sed do eiusmod tempor incididunt',
   actions: {
     continue: 'Continue',
   },
