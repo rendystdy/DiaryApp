@@ -2,9 +2,10 @@ import 'react-native-gesture-handler'
 import React from 'react'
 import { Provider } from 'react-redux'
 import { PersistGate } from 'redux-persist/lib/integration/react'
-import { store, persistor } from '@/Store'
+import { store, persiststore } from './Redux/CreateStore/CreateStore'
 import { ApplicationNavigator } from '@/Navigators'
 import './Translations'
+import FlashMessage from 'react-native-flash-message'
 
 const App = () => (
   <Provider store={store}>
@@ -15,8 +16,9 @@ const App = () => (
      * for example `loading={<SplashScreen />}`.
      * @see https://github.com/rt2zz/redux-persist/blob/master/docs/PersistGate.md
      */}
-    <PersistGate loading={null} persistor={persistor}>
+    <PersistGate loading={null} persistor={persiststore}>
       <ApplicationNavigator />
+      <FlashMessage position="top" />
     </PersistGate>
   </Provider>
 )
