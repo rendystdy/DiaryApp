@@ -17,37 +17,36 @@ const dummyData = [
     title:
       'Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet',
     desc: 'desc 1',
-    date: new Date("October 15, 2021")
+    date: new Date('October 15, 2021'),
   },
   {
     id: '2',
     title: 'consectetur adipiscing elit',
     desc: 'desc 2',
-    date: new Date("December 13, 2021")
+    date: new Date('December 13, 2021'),
   },
   {
     id: '3',
     title: 'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
     desc: 'desc 3',
-    date: new Date("January 21, 2021")
+    date: new Date('January 21, 2021'),
   },
   {
     id: '4',
     title: 'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
     desc: 'desc 4',
-    date: new Date("Februari 01, 2021")
+    date: new Date('Februari 01, 2021'),
   },
 ]
 
 const getListNotes = () => async dispatch => {
-
   const sortedByDate = dummyData.sort((a, b) => b.date - a.date)
   dispatch({ type: GET_LIST_NOTES })
 
   try {
     setTimeout(() => {
       dispatch({ type: GET_LIST_NOTES_SUCCESS, payload: sortedByDate })
-    }, 3000)
+    }, 2000)
   } catch (error) {
     dispatch({ type: GET_LIST_NOTES_FAILED, msg: 'somthing wrong !!!' })
   }

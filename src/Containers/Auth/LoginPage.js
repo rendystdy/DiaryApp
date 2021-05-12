@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { connect } from 'react-redux'
-import { StyleSheet, Text, View, Image, ScrollView } from 'react-native'
+import { StyleSheet, Text, View, Image, ScrollView, Alert } from 'react-native'
 import { useTheme } from '../../Theme'
 import { InputText, Gap, Button, SignUp } from '../../Components'
 import { navigateAndSimpleReset } from '../../Navigators/Root'
@@ -98,10 +98,10 @@ const LoginPage = props => {
           text="Login"
           loading={loading}
           onPress={handleAuthLogin}
-          disabled={!disabled && loading}
+          disabled={!disabled || loading}
         />
         <Gap height={39} />
-        <SignUp />
+        <SignUp onPress={() => Alert.alert('Sign Up') } />
       </ScrollView>
     </View>
   )
