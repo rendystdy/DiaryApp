@@ -1,7 +1,13 @@
 import React from 'react'
-import { StyleSheet, Text, View, Image } from 'react-native'
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  TouchableWithoutFeedback,
+} from 'react-native'
 
-const HeaderProfile = ({ name, urlImage }) => {
+const HeaderProfile = ({ name, urlImage, onPressImage }) => {
   return (
     <View>
       <View style={styles.container}>
@@ -9,13 +15,15 @@ const HeaderProfile = ({ name, urlImage }) => {
           <Text style={styles.title}>Hello ...</Text>
           <Text style={styles.name}>Batries</Text>
         </View>
-        <View style={styles.wrapperImage}>
-          <Image
-            source={urlImage}
-            resizeMode="cover"
-            style={{ width: '100%', height: '100%' }}
-          />
-        </View>
+        <TouchableWithoutFeedback onPress={onPressImage}>
+          <View style={styles.wrapperImage}>
+            <Image
+              source={urlImage}
+              resizeMode="cover"
+              style={{ width: '100%', height: '100%' }}
+            />
+          </View>
+        </TouchableWithoutFeedback>
       </View>
     </View>
   )
