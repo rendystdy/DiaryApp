@@ -11,7 +11,7 @@ import { useTheme } from '../Theme/'
 
 const HeaderWithBack = ({ onPressBack, onPressSave, type, loading }) => {
   const { Images } = useTheme()
-  console.log({ loadingHeader: loading })
+
   return (
     <View style={styles.container}>
       <TouchableWithoutFeedback onPress={onPressBack}>

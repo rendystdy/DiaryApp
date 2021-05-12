@@ -35,7 +35,6 @@ const LoginPage = props => {
     let filled = true
 
     Object.keys(forms).map(form => {
-      console.log(form)
       if (!forms[form]) {
         filled = false
       }
@@ -101,7 +100,7 @@ const LoginPage = props => {
           disabled={!disabled || loading}
         />
         <Gap height={39} />
-        <SignUp onPress={() => Alert.alert('Sign Up') } />
+        <SignUp onPress={() => Alert.alert('Sign Up')} />
       </ScrollView>
     </View>
   )

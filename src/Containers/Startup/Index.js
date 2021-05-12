@@ -8,7 +8,6 @@ import {
 import { useDispatch } from 'react-redux'
 import { useTranslation } from 'react-i18next'
 import { useTheme } from '../../Theme'
-import InitStartup from '../../Store/Startup/Init'
 import { Brand, Button } from '../../Components'
 import { navigate } from '../../Navigators/Root'
 import AsyncStorage from '@react-native-async-storage/async-storage'
