@@ -14,16 +14,13 @@ export default function () {
   const colorScheme = useColorScheme()
 
   // Get current theme from the store
-  const currentTheme = useSelector(state => state.theme.theme || 'default')
-  const isDark = useSelector(state => state.theme.darkMode)
-  const darkMode = isDark === null ? colorScheme === 'dark' : isDark
+  // const currentTheme = useSelector(state => state.theme.theme || 'default')
+  // const isDark = useSelector(state => state.theme.darkMode)
+  const darkMode =  'dark'
   //Select the right theme light theme ({} if not exist)
-  const { Variables: themeConfigVars = {}, ...themeConfig } =
-    themes[currentTheme] || {}
+  const { Variables: themeConfigVars = {}, ...themeConfig } = {}
 
-  const { Variables: darkThemeConfigVars = {}, ...darkThemeConfig } = darkMode
-    ? themes[`${currentTheme}_dark`] || {}
-    : {}
+  const { Variables: darkThemeConfigVars = {}, ...darkThemeConfig } = {}
 
   const themeVariables = mergeVariables(
     DefaultVariables,
