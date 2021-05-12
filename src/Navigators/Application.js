@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { createStackNavigator } from '@react-navigation/stack'
-import { IndexStartupContainer, LoginPage, HomePage } from '../Containers'
+import { IndexStartupContainer, LoginPage, HomePage, AddNotePage } from '../Containers'
 import { useSelector } from 'react-redux'
 import { NavigationContainer } from '@react-navigation/native'
 import { navigationRef } from '../Navigators/Root'
@@ -36,7 +36,7 @@ const ApplicationNavigator = () => {
 
   return (
     <SafeAreaView style={[Layout.fill]}>
-      <NavigationContainer theme={NavigationTheme} ref={navigationRef}>
+      <NavigationContainer ref={navigationRef}>
         <StatusBar />
         <Stack.Navigator>
           <Stack.Screen
@@ -52,6 +52,11 @@ const ApplicationNavigator = () => {
           <Stack.Screen
             name="HomePage"
             component={HomePage}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="AddNotePage"
+            component={AddNotePage}
             options={{ headerShown: false }}
           />
           {/* {isApplicationLoaded && MainNavigator != null && (
